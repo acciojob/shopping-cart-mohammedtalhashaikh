@@ -4,30 +4,34 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
-	<script type="text/javascript" src="./appendList.js"></script>
+	<script type="text/javascript" src="./script.js"></script>
 </head>
 
 <body>
-	<h3>Shopping List Calculator</h3>
-	<table id="table">
-		<thead>
+	<header id="heading">
+		Shopping List Calculator
+	</header>
+	<main onload="render()">
+		<table id="table1">
+			<caption></caption>
 			<tr>
 				<th>Item Name</th>
+				<th>Quantity</th>
 				<th>Price</th>
 				<th>Total</th>
 			</tr>
-		</thead>
-	</table>
-	<form action="" id="myform">
-		<input type="text" id="item-name-input" placeholder="Name">
-		<input type="text" id="item-price-input" placeholder="Price">
-	</form>
-	<button id="add">Add</button>
-	<div id="total">Total Ammount is 0 $</div>
-	<!-- the entire body must be written by student -->
-	<script type="text/javascript" src="./script.js">
-	</script>
-
+			<tr>
+				<form id="myinputs">
+					<td><input type="text" id="item-name-input" placeholder="Name"></td>
+					<td><input type="text" id="item-qty-input" placeholder="Qty"></td>
+					<td><input type="text" id="item-price-input" placeholder="Price"></td>
+				</form>
+				<td><button id="add" onclick="addData();">Add</button></td>
+			</tr>
+		</table>
+		<div id="total">Total Ammount is 0 $</div>
+	</main>
+	<footer></footer>
 </body>
 
 </html>
